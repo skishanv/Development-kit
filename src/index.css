@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Mobile-first adjustments */
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  @apply text-base antialiased touch-manipulation;
+}
+
+/* Better touch targets */
+button, 
+input, 
+select {
+  @apply min-h-[44px] min-w-[44px];
+}
+
+/* Prevent text scaling */
+@media screen and (max-width: 768px) {
+  input, button, select, textarea {
+    font-size: 16px !important;
+  }
+}
